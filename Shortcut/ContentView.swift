@@ -1,21 +1,28 @@
-//
-//  ContentView.swift
-//  Shortcut
-//
-//  Created by Yuri Mario Gianoli on 15/11/23.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            ShortcutView()
+                .tabItem {
+                    Label("Shortcut", systemImage: "square.2.layers.3d.fill")
+                }
+            AutomatationView()
+                .tabItem {
+                    Label("Automatation", systemImage: "deskclock.fill")
+                }
+            GalleryView()
+                .tabItem {
+                    Label("Gallery", systemImage: "sparkles.rectangle.stack.fill")
+                }
         }
-        .padding()
+        
+        
+        
+        
     }
 }
 
