@@ -30,8 +30,8 @@ struct GalleryView: View {
                                 Text("pippo \($0)")
                                     .foregroundStyle(.white)
                                     .font(.title)
-                                    .frame(width: 350, height: 145)
-                                    .background(Color.blue)
+                                    .frame(width: 350, height: 140)
+                                    .background(Color.red)
                                     .cornerRadius(25.0)
                             }
                         }
@@ -39,6 +39,11 @@ struct GalleryView: View {
                     }
                     .padding(.leading, 10)
                     .frame(height: 200)
+                        Text("Get stuff Done")
+                            .bold()
+                            .font(.system(size: 25))
+                            .padding(.leading, 20)
+                            .padding(.bottom, 10)
                     ScrollView (.horizontal, showsIndicators: false){
                         HStack(spacing: 25) {
                             ForEach(0..<10) {
@@ -47,7 +52,7 @@ struct GalleryView: View {
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 175, height: 120)
-                                    .background(Color.blue)
+                                    .background(Color.green)
                                     .cornerRadius(25.0)
                             }
                         }
