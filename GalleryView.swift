@@ -11,7 +11,7 @@ struct GalleryView: View {
     @State private var searchBar = ""
     @State private var isModalPresented = false
     var body: some View {
-        //Color(red: , green: <#T##Double#>, blue: <#T##Double#>)
+       // Color(red: 1.0, green: 0.0, blue: 0.0)
         //value / 255
         
         NavigationStack{
@@ -36,7 +36,7 @@ struct GalleryView: View {
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 350, height: 140)
-                                    .background(Color.red)
+                                    .background(Color(red: 0.0, green: 0.0, blue: 0.0))
                                     .cornerRadius(25.0)
                             }
                         }
@@ -61,7 +61,7 @@ struct GalleryView: View {
                                         .foregroundStyle(.white)
                                         .font(.title)
                                         .frame(width: 165, height: 110)
-                                        .background(Color.green)
+                                        .background(Color(red: 1.0, green: 0.27, blue: 0.227))
                                         .cornerRadius(25.0)
                                 })
                                 .sheet(isPresented: $isModalPresented){
@@ -91,7 +91,7 @@ struct GalleryView: View {
                                         .foregroundStyle(.white)
                                         .font(.title)
                                         .frame(width: 165, height: 110)
-                                        .background(Color.blue)
+                                        .background(Color(red: 0.678, green: 0.266, blue: 0.670))
                                         .cornerRadius(25.0)
                                 })
                                 .sheet(isPresented: $isModalPresented){
