@@ -69,7 +69,7 @@ struct GalleryView: View {
                                 }
                             }
                         }
-                    
+                        
                         
                     }
                     .padding(.leading, 10)
@@ -82,93 +82,97 @@ struct GalleryView: View {
                         .padding(.leading, 20)
                         .padding(.bottom, -20)
                     ScrollView (.horizontal, showsIndicators: false){
-                        NavigationLink (destination:QuickShortcutsView()){
-                            HStack(spacing: 15) {
-                                ForEach(1..<11) {
-                                    
-                                    Text("pippo Franco \($0)")
+                        HStack(spacing: 15) {
+                            ForEach(1..<11) {_ in
+                                Button(action: {
+                                    isModalPresented.toggle()
+                                }, label: {
+                                    Text("pippo Franco ")
                                         .foregroundStyle(.white)
                                         .font(.title)
                                         .frame(width: 165, height: 110)
                                         .background(Color.blue)
                                         .cornerRadius(25.0)
+                                })
+                                .sheet(isPresented: $isModalPresented){
+                                    QuickShortcutsView(isPresented: $isModalPresented)
                                 }
                             }
                         }
-                    }
-                    .padding(.leading, 10)
-                    .frame(height: 200)
-                    Text("Essentials")
-                        .bold()
-                        .font(.system(size: 25))
-                        .padding(.leading, 20)
-                        .padding(.top, -30)
-                    ScrollView (.horizontal, showsIndicators: false){
-                        HStack(spacing: 15) {
-                            ForEach(1..<11) {
-                                
-                                Text("pippo: no \($0)")
-                                    .foregroundStyle(.white)
-                                    .font(.title)
-                                    .frame(width: 165, height: 110)
-                                    .background(Color.purple)
-                                    .cornerRadius(25.0)
-                                
-                            }
-                        }
                         
-                    }
-                    .padding(.leading, 10)
-                    .frame(height: 150)
-                    Text("Collaborate Better")
-                        .bold()
-                        .font(.system(size: 25))
-                        .padding(.leading, 20)
-                        .padding(.bottom, -20)
-                    ScrollView (.horizontal, showsIndicators: false){
-                        HStack(spacing: 15) {
-                            ForEach(1..<11) {
-                                
-                                Text("pippo: si \($0)")
-                                    .foregroundStyle(.white)
-                                    .font(.title)
-                                    .frame(width: 165, height: 110)
-                                    .background(Color.orange)
-                                    .cornerRadius(25.0)
+                        .padding(.leading, 10)
+                        .frame(height: 200)
+                        Text("Essentials")
+                            .bold()
+                            .font(.system(size: 25))
+                            .padding(.leading, 20)
+                            .padding(.top, -30)
+                        ScrollView (.horizontal, showsIndicators: false){
+                            HStack(spacing: 15) {
+                                ForEach(1..<11) {_ in
+                                    
+                                    Text("pippo: no ")
+                                        .foregroundStyle(.white)
+                                        .font(.title)
+                                        .frame(width: 165, height: 110)
+                                        .background(Color.purple)
+                                        .cornerRadius(25.0)
+                                    
+                                }
                             }
+                            
                         }
-                        
-                    }
-                    .padding(.leading, 10)
-                    .frame(height: 200)
-                    
-                    Text("Photography")
-                        .bold()
-                        .font(.system(size: 25))
-                        .padding(.leading, 20)
-                        .padding(.top, -30)
-                    ScrollView (.horizontal, showsIndicators: false){
-                        HStack(spacing: 15) {
-                            ForEach(1..<11) {
-                                
-                                Text("pippo Baudo \($0)")
-                                    .foregroundStyle(.white)
-                                    .font(.title)
-                                    .frame(width: 165, height: 110)
-                                    .background(Color.black)
-                                    .cornerRadius(25.0)
+                        .padding(.leading, 10)
+                        .frame(height: 150)
+                        Text("Collaborate Better")
+                            .bold()
+                            .font(.system(size: 25))
+                            .padding(.leading, 20)
+                            .padding(.bottom, -20)
+                        ScrollView (.horizontal, showsIndicators: false){
+                            HStack(spacing: 15) {
+                                ForEach(1..<11) {_ in
+                                    
+                                    Text("pippo: si ")
+                                        .foregroundStyle(.white)
+                                        .font(.title)
+                                        .frame(width: 165, height: 110)
+                                        .background(Color.orange)
+                                        .cornerRadius(25.0)
+                                }
                             }
+                            
                         }
+                        .padding(.leading, 10)
+                        .frame(height: 200)
                         
+                        Text("Photography")
+                            .bold()
+                            .font(.system(size: 25))
+                            .padding(.leading, 20)
+                            .padding(.top, -30)
+                        ScrollView (.horizontal, showsIndicators: false){
+                            HStack(spacing: 15) {
+                                ForEach(1..<11) {_ in
+                                    
+                                    Text("pippo Baudo")
+                                        .foregroundStyle(.white)
+                                        .font(.title)
+                                        .frame(width: 165, height: 110)
+                                        .background(Color.black)
+                                        .cornerRadius(25.0)
+                                }
+                            }
+                            
+                        }
+                        .padding(.leading, 10)
+                        .frame(height: 150)
                     }
-                    .padding(.leading, 10)
-                    .frame(height: 150)
                 }
             }
         }
     }
 }
-
 
 #Preview {
     GalleryView()
