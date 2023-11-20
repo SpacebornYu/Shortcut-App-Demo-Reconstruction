@@ -30,15 +30,34 @@ struct GalleryView: View {
                         .padding(.bottom, -25)
                     ScrollView (.horizontal, showsIndicators: false){
                         HStack(spacing: 25) {
-                            ForEach(1..<5) {_ in
+                           // ForEach(1..<5) {_ in
                                 Image(systemName: "accessibility")
                                     .foregroundStyle(.white)
                                     .font(.system(size: 100))
                                     .frame(width: 350, height: 140)
                                     .background(Color(red: 0.0, green: 0.0, blue: 0.0))
                                     .cornerRadius(25.0)
-                            }
+                            //}
+                            Image(systemName: "accessibility")
+                                .foregroundStyle(.white)
+                                .font(.system(size: 100))
+                                .frame(width: 350, height: 140)
+                                .background(Color(red: 0.0, green: 0.0, blue: 0.0))
+                                .cornerRadius(25.0)
                             
+                            Image(systemName: "accessibility")
+                                .foregroundStyle(.white)
+                                .font(.system(size: 100))
+                                .frame(width: 350, height: 140)
+                                .background(Color(red: 0.0, green: 0.0, blue: 0.0))
+                                .cornerRadius(25.0)
+                            
+                            Image(systemName: "accessibility")
+                                .foregroundStyle(.white)
+                                .font(.system(size: 100))
+                                .frame(width: 350, height: 140)
+                                .background(Color(red: 0.0, green: 0.0, blue: 0.0))
+                                .cornerRadius(25.0)
                         }
                     }
                     
