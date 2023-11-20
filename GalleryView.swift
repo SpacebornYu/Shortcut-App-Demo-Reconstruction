@@ -38,21 +38,21 @@ struct GalleryView: View {
                                     .background(Color(red: 0.0, green: 0.0, blue: 0.0))
                                     .cornerRadius(25.0)
                             //}
-                            Image(systemName: "accessibility")
+                            Image(systemName: "network.badge.shield.half.filled")
                                 .foregroundStyle(.white)
                                 .font(.system(size: 100))
                                 .frame(width: 350, height: 140)
                                 .background(Color(red: 0.0, green: 0.0, blue: 0.0))
                                 .cornerRadius(25.0)
                             
-                            Image(systemName: "accessibility")
+                            Image(systemName: "greetingcard")
                                 .foregroundStyle(.white)
                                 .font(.system(size: 100))
                                 .frame(width: 350, height: 140)
                                 .background(Color(red: 0.0, green: 0.0, blue: 0.0))
                                 .cornerRadius(25.0)
                             
-                            Image(systemName: "accessibility")
+                            Image(systemName: "tag")
                                 .foregroundStyle(.white)
                                 .font(.system(size: 100))
                                 .frame(width: 350, height: 140)
@@ -60,7 +60,7 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                         }
                     }
-                    
+                    //
                     .padding(.leading, 10)
                     .frame(height: 200)
                     Text("Get stuff Done")
@@ -70,20 +70,25 @@ struct GalleryView: View {
                         .padding(.bottom, 30)
                     ScrollView (.horizontal, showsIndicators: false){
                         HStack(spacing: 15) {
+                            
                             //  ForEach(1..<11) { _ in
-                            Button(action: {
-                                isModalPresented.toggle()
-                            }, label: {
-                                Text("Testo in audio")
-                                    .font(.system(size: 20))
-                                    .foregroundStyle(.white)
-                                    .font(.title)
-                                    .frame(width: 165, height: 110)
-                                    .background(Color(red: 1.0, green: 0.27, blue: 0.227))
-                                    .cornerRadius(25.0)
-                            })
-                            .sheet(isPresented: $isModalPresented){
-                                TextToAudioView(isPresented: $isModalPresented)
+                            VStack {
+                                Button(action: {
+                                    isModalPresented.toggle()
+                                }, label: {
+                                    Text("Testo in audio") 
+                                        .font(.system(size: 20))
+                                        .foregroundStyle(.white)
+                                        .font(.title)
+                                        .frame(width: 165, height: 110)
+                                        .background(Color(red: 1.0, green: 0.27, blue: 0.227))
+                                        .cornerRadius(25.0)
+                                })
+                                
+                                .sheet(isPresented: $isModalPresented){
+                                    TextToAudioView(isPresented: $isModalPresented)
+                            }
+                               
                             }
                             
                             
