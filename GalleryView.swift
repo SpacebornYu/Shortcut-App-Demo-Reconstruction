@@ -30,7 +30,7 @@ struct GalleryView: View {
                         .padding(.bottom, -25)
                     ScrollView (.horizontal, showsIndicators: false){
                         HStack(spacing: 25) {
-                            ForEach(1..<11) {
+                            ForEach(1..<5) {
                                 
                                 Text("cristo iddio \($0)")
                                     .foregroundStyle(.white)
@@ -91,7 +91,7 @@ struct GalleryView: View {
                                         .foregroundStyle(.white)
                                         .font(.title)
                                         .frame(width: 165, height: 110)
-                                        .background(Color(red: 0.678, green: 0.266, blue: 0.670))
+                                        .background(Color(red: 0.749, green: 0.352, blue: 0.949))
                                         .cornerRadius(25.0)
                                 })
                                 .sheet(isPresented: $isModalPresented){
@@ -99,7 +99,7 @@ struct GalleryView: View {
                                 }
                             }
                         }
-                        
+                    }
                         .padding(.leading, 10)
                         .frame(height: 200)
                         Text("Essentials")
@@ -110,12 +110,11 @@ struct GalleryView: View {
                         ScrollView (.horizontal, showsIndicators: false){
                             HStack(spacing: 15) {
                                 ForEach(1..<11) {_ in
-                                    
                                     Text("pippo: no ")
                                         .foregroundStyle(.white)
                                         .font(.title)
                                         .frame(width: 165, height: 110)
-                                        .background(Color.purple)
+                                        .background(Color(red: 0.039, green: 0.517, blue: 1.0))
                                         .cornerRadius(25.0)
                                     
                                 }
@@ -137,7 +136,7 @@ struct GalleryView: View {
                                         .foregroundStyle(.white)
                                         .font(.title)
                                         .frame(width: 165, height: 110)
-                                        .background(Color.orange)
+                                        .background(Color(red: 0.203, green: 0.78, blue: 0.349))
                                         .cornerRadius(25.0)
                                 }
                             }
@@ -159,7 +158,7 @@ struct GalleryView: View {
                                         .foregroundStyle(.white)
                                         .font(.title)
                                         .frame(width: 165, height: 110)
-                                        .background(Color.black)
+                                        .background(Color(red: 1.0, green: 0.584, blue: 0.0))
                                         .cornerRadius(25.0)
                                 }
                             }
@@ -172,7 +171,7 @@ struct GalleryView: View {
             }
         }
     }
-}
+
 
 #Preview {
     GalleryView()
