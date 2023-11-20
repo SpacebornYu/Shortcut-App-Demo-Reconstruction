@@ -9,7 +9,11 @@ import SwiftUI
 
 struct GalleryView: View {
     @State private var searchBar = ""
+    @State private var isModalPresented = false
     var body: some View {
+        //Color(red: , green: <#T##Double#>, blue: <#T##Double#>)
+        //value / 255
+        
         NavigationStack{
             Text("")
                 .navigationTitle("Gallery")
@@ -18,6 +22,7 @@ struct GalleryView: View {
             
             ScrollView(.vertical, showsIndicators: false){
                 VStack (alignment: .leading) {
+                    
                     Text("Shortcuts for Accessibility")
                         .bold()
                         .font(.system(size: 25))
@@ -37,6 +42,7 @@ struct GalleryView: View {
                         }
                         
                     }
+                    
                     .padding(.leading, 10)
                     .frame(height: 200)
                     Text("Get stuff Done")
@@ -46,17 +52,24 @@ struct GalleryView: View {
                         .padding(.bottom, 30)
                     ScrollView (.horizontal, showsIndicators: false){
                         HStack(spacing: 15) {
-                            ForEach(1..<11) {
-                                
-                                Text("Trasforma il testo in audio \($0)")
-                                    .font(.system(size: 20))
-                                    .foregroundStyle(.white)
-                                    .font(.title)
-                                    .frame(width: 165, height: 110)
-                                    .background(Color.green)
-                                    .cornerRadius(25.0)
+                            ForEach(1..<11) { _ in
+                                Button(action: {
+                                    isModalPresented.toggle()
+                                }, label: {
+                                    Text("Trasforma il testo in audio")
+                                        .font(.system(size: 20))
+                                        .foregroundStyle(.white)
+                                        .font(.title)
+                                        .frame(width: 165, height: 110)
+                                        .background(Color.green)
+                                        .cornerRadius(25.0)
+                                })
+                                .sheet(isPresented: $isModalPresented){
+                                    TextToAudioView(isPresented: $isModalPresented)
+                                }
                             }
                         }
+                    
                         
                     }
                     .padding(.leading, 10)
@@ -69,18 +82,19 @@ struct GalleryView: View {
                         .padding(.leading, 20)
                         .padding(.bottom, -20)
                     ScrollView (.horizontal, showsIndicators: false){
-                        HStack(spacing: 15) {
-                            ForEach(1..<11) {
-                                
-                                Text("pippo Franco \($0)")
-                                    .foregroundStyle(.white)
-                                    .font(.title)
-                                    .frame(width: 165, height: 110)
-                                    .background(Color.blue)
-                                    .cornerRadius(25.0)
+                        NavigationLink (destination:QuickShortcutsView()){
+                            HStack(spacing: 15) {
+                                ForEach(1..<11) {
+                                    
+                                    Text("pippo Franco \($0)")
+                                        .foregroundStyle(.white)
+                                        .font(.title)
+                                        .frame(width: 165, height: 110)
+                                        .background(Color.blue)
+                                        .cornerRadius(25.0)
+                                }
                             }
                         }
-                        
                     }
                     .padding(.leading, 10)
                     .frame(height: 200)
@@ -99,7 +113,7 @@ struct GalleryView: View {
                                     .frame(width: 165, height: 110)
                                     .background(Color.purple)
                                     .cornerRadius(25.0)
-
+                                
                             }
                         }
                         
@@ -154,6 +168,7 @@ struct GalleryView: View {
         }
     }
 }
+
 
 #Preview {
     GalleryView()

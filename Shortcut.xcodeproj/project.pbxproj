@@ -14,6 +14,8 @@
 		BE1FA4B42B04D81D00FF9E0F /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA4B32B04D81D00FF9E0F /* ShortcutView.swift */; };
 		BE1FA4B62B04D83400FF9E0F /* AutomatationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA4B52B04D83400FF9E0F /* AutomatationView.swift */; };
 		BE1FA4B82B04D86C00FF9E0F /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA4B72B04D86C00FF9E0F /* GalleryView.swift */; };
+		BECF786E2B0B5BAA005CD836 /* TextToAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF786D2B0B5BAA005CD836 /* TextToAudioView.swift */; };
+		BECF78702B0B5D62005CD836 /* QuickShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF786F2B0B5D62005CD836 /* QuickShortcutsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		BE1FA4B32B04D81D00FF9E0F /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
 		BE1FA4B52B04D83400FF9E0F /* AutomatationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomatationView.swift; sourceTree = "<group>"; };
 		BE1FA4B72B04D86C00FF9E0F /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		BECF786D2B0B5BAA005CD836 /* TextToAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToAudioView.swift; sourceTree = "<group>"; };
+		BECF786F2B0B5D62005CD836 /* QuickShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickShortcutsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 		BE1FA4992B04CBEE00FF9E0F = {
 			isa = PBXGroup;
 			children = (
+				BECF786F2B0B5D62005CD836 /* QuickShortcutsView.swift */,
+				BECF786D2B0B5BAA005CD836 /* TextToAudioView.swift */,
 				BE1FA4B72B04D86C00FF9E0F /* GalleryView.swift */,
 				BE1FA4B52B04D83400FF9E0F /* AutomatationView.swift */,
 				BE1FA4B32B04D81D00FF9E0F /* ShortcutView.swift */,
@@ -146,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECF78702B0B5D62005CD836 /* QuickShortcutsView.swift in Sources */,
 				BE1FA4B42B04D81D00FF9E0F /* ShortcutView.swift in Sources */,
+				BECF786E2B0B5BAA005CD836 /* TextToAudioView.swift in Sources */,
 				BE1FA4A82B04CBEE00FF9E0F /* ContentView.swift in Sources */,
 				BE1FA4B62B04D83400FF9E0F /* AutomatationView.swift in Sources */,
 				BE1FA4A62B04CBEE00FF9E0F /* ShortcutApp.swift in Sources */,
