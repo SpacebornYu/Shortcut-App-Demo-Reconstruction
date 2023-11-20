@@ -18,5 +18,5 @@ struct QuickShortcutsView: View {
 }
 
 //#Preview {
-//    QuickShortcutsView()
+//   QuickShortcutsView()
 //}
