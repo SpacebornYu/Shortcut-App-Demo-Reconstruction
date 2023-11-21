@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct QuickShortcutsView: View {
-    @Binding var isPresented: Bool
+   // @Binding var isPresented: Bool
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         Button("Close") {
-            isPresented = false
+       //     isPresented = false
         }
     }
 }
 
-//#Preview {
-//   QuickShortcutsView()
-//}
+#Preview {
+   QuickShortcutsView()
+}
