@@ -35,7 +35,7 @@ struct QuickShortcutsView: View {
                     Text("Markup and Send")
                         .bold()
                         .font(.system(size: 30))
-                        .padding(.top, 20)
+                        .padding(.top, 60)
                     
                     
                     Text("Take any image input, quickly mark it up, and")
@@ -133,7 +133,7 @@ struct QuickShortcutsView: View {
                         
                     }
                     .foregroundColor(.white)
-                    .frame(width: 350, height: 49)
+                    .frame(width: 350, height: 40)
                     .background(Color.blue)
                     .cornerRadius(8.0)
                     .padding(.top)
@@ -141,7 +141,7 @@ struct QuickShortcutsView: View {
                     .font(.system(size: 18))
 
                 }
-                .padding(.bottom, 50)
+                .padding(.bottom, 40)
                 
             }
             
