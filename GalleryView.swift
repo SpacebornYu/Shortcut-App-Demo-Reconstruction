@@ -81,14 +81,16 @@ struct GalleryView: View {
                                         VStack {
                                             
                                             Text("Start Pomodoro")
+                                            
                                                 .font(.system(size:18))
                                                 .padding(.top, 50)
                                                 .foregroundStyle(.white)
                                                 .font(.title)
                                                 .frame(width: 165, height: 110)
-                                                .background(Color(red: 1.0, green: 0.27, blue: 0.227))
+                                                .background(Color(red: 1.0, green: 0.415, blue: 0.431))
                                                 .cornerRadius(25.0)
                                                 .fontWeight(.semibold)
+                                            
                                         }
                                     })
                                     
@@ -100,7 +102,7 @@ struct GalleryView: View {
                                 }
                                 Image(systemName: "timer")
                                     .foregroundColor(.white)
-                                    .padding(.top, -35)
+                                    .padding(.top, -40)
                                     .font(.system(size: 23))
                                     .padding(.leading, -65)
                                     .fontWeight(.bold)
@@ -119,7 +121,7 @@ struct GalleryView: View {
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 165, height: 110)
-                                    .background(Color(red: 1.0, green: 0.27, blue: 0.227))
+                                    .background(Color(red: 1.0, green: 0.415, blue: 0.431))
                                     .cornerRadius(25.0)
                                     .fontWeight(.semibold)
                             })
@@ -137,14 +139,26 @@ struct GalleryView: View {
                             Button(action: {
                                 isModalPresented.toggle()
                             }, label: {
-                                Text("Testo in audio")
-                                    .font(.system(size: 20))
+                                Text("Batch Add\n Reminders")
+                                    .font(.system(size: 17))
+                                    .padding(.leading, -55)
+                                    .padding(.top, 50)
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 165, height: 110)
-                                    .background(Color(red: 1.0, green: 0.27, blue: 0.227))
+                                    .background(Color(red: 0.0, green: 0.713, blue: 0.968))
                                     .cornerRadius(25.0)
                                     .padding(.leading, -13)
+                                    .fontWeight(.semibold)
+                                
+                                Image(systemName: "list.bullet")
+                                    .foregroundColor(.white)
+                                    .padding(.top, -40)
+                                    .font(.system(size: 23))
+                                    .padding(.leading, -155)
+                                    .fontWeight(.bold)
+
+                                
                             })
                             .sheet(isPresented: $isModalPresented){
                                 TextToAudioView(isPresented: $isModalPresented)
@@ -154,13 +168,24 @@ struct GalleryView: View {
                             Button(action: {
                                 isModalPresented.toggle()
                             }, label: {
-                                Text("Testo in audio")
-                                    .font(.system(size: 20))
+                                Text("How Many\nDays Until")
+                                    .font(.system(size: 17))
+                                    .padding(.leading, -55)
+                                    .padding(.top, 50)
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 165, height: 110)
-                                    .background(Color(red: 1.0, green: 0.27, blue: 0.227))
+                                    .background(Color(red: 0.98, green: 0.666, blue: 0.0))
                                     .cornerRadius(25.0)
+                                    .padding(.leading, -13)
+                                    .fontWeight(.semibold)
+                                
+                                Image(systemName: "calendar")
+                                    .foregroundColor(.white)
+                                    .padding(.top, -40)
+                                    .font(.system(size: 23))
+                                    .padding(.leading, -155)
+                                    .fontWeight(.bold)
                             })
                             .sheet(isPresented: $isModalPresented){
                                 TextToAudioView(isPresented: $isModalPresented)
@@ -170,19 +195,28 @@ struct GalleryView: View {
                             Button(action: {
                                 isModalPresented.toggle()
                             }, label: {
-                                Text("Testo in audio")
+                                Text("Sort Lines")
                                     .font(.system(size: 20))
+                                    .padding(.leading, -55)
+                                    .padding(.top, 50)
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 165, height: 110)
-                                    .background(Color(red: 1.0, green: 0.27, blue: 0.227))
+                                    .background(Color(red: 0.929, green: 0.776, blue: 0.0))
                                     .cornerRadius(25.0)
+                                    .padding(.leading, -13)
+                                    .fontWeight(.semibold)
+                                
+                                Image(systemName: "doc.text.fill")
+                                    .foregroundColor(.white)
+                                    .padding(.top, -40)
+                                    .font(.system(size: 23))
+                                    .padding(.leading, -155)
+                                    .fontWeight(.bold)
                             })
                             .sheet(isPresented: $isModalPresented){
                                 TextToAudioView(isPresented: $isModalPresented)
                             }
-                            // multiple buttons for the first shortcut
-                            // }
                         }
                         
                         
