@@ -10,6 +10,8 @@ import SwiftUI
 struct GalleryView: View {
     @State private var searchBar = ""
     @State private var isModalPresented = false
+    @State private var isModal2Presented = false
+    
     var body: some View {
         
         NavigationStack{
@@ -79,7 +81,7 @@ struct GalleryView: View {
                                         VStack {
                                             
                                             Text("Start Pomodoro")
-                                                .font(.system(size: 18))
+                                                .font(.system(size:18))
                                                 .padding(.top, 50)
                                                 .foregroundStyle(.white)
                                                 .font(.title)
@@ -90,16 +92,16 @@ struct GalleryView: View {
                                         }
                                     })
                                     
-                                    //                                    .sheet(isPresented: $isModalPresented){
-                                    //                                       TextToAudioView(isPresented: $isModalPresented)
-                                    //                                    }
+                                    .sheet(isPresented: $isModalPresented){
+                                        TextToAudioView(isPresented: $isModalPresented)
+                                    }
                                     
                                     
                                 }
                                 Image(systemName: "timer")
                                     .foregroundColor(.white)
                                     .padding(.top, -35)
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 23))
                                     .padding(.leading, -65)
                                     .fontWeight(.bold)
                             }
@@ -127,9 +129,9 @@ struct GalleryView: View {
                                 .font(.system(size: 20))
                                 .padding(.leading, -165)
                                 .fontWeight(.bold)
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                TextToAudioView(isPresented: $isModalPresented)
-                            //                            }
+                                .sheet(isPresented: $isModalPresented){
+                                    TextToAudioView(isPresented: $isModalPresented)
+                                }
                             
                             
                             Button(action: {
@@ -144,9 +146,9 @@ struct GalleryView: View {
                                     .cornerRadius(25.0)
                                     .padding(.leading, -13)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                TextToAudioView(isPresented: $isModalPresented)
-                            //                            }
+                            .sheet(isPresented: $isModalPresented){
+                                TextToAudioView(isPresented: $isModalPresented)
+                            }
                             
                             
                             Button(action: {
@@ -160,10 +162,10 @@ struct GalleryView: View {
                                     .background(Color(red: 1.0, green: 0.27, blue: 0.227))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                TextToAudioView(isPresented: $isModalPresented)
-                            //                            }
-                            //
+                            .sheet(isPresented: $isModalPresented){
+                                TextToAudioView(isPresented: $isModalPresented)
+                            }
+                            
                             
                             Button(action: {
                                 isModalPresented.toggle()
@@ -176,9 +178,9 @@ struct GalleryView: View {
                                     .background(Color(red: 1.0, green: 0.27, blue: 0.227))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                TextToAudioView(isPresented: $isModalPresented)
-                            //                            }
+                            .sheet(isPresented: $isModalPresented){
+                                TextToAudioView(isPresented: $isModalPresented)
+                            }
                             // multiple buttons for the first shortcut
                             // }
                         }
@@ -190,24 +192,24 @@ struct GalleryView: View {
                     .frame(height: 130)
                     
                     
-                        Text("Quick Shortcuts")
-                            .bold()
-                            .font(.system(size: 25))
-                            .padding(.leading, 10)
-                            .padding(.bottom, -50)
-                        
-                        Text("Less taps, more done with these fast shortcuts")
-                            .fontWeight(.regular)
-                            .font(.callout)
-                            .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
-                            .multilineTextAlignment(.leading)
-                            .padding(.leading, 13)
-                            .padding(.top, 20)
+                    Text("Quick Shortcuts")
+                        .bold()
+                        .font(.system(size: 25))
+                        .padding(.leading, 10)
+                        .padding(.bottom, -50)
+                    
+                    Text("Less taps, more done with these fast shortcuts")
+                        .fontWeight(.regular)
+                        .font(.callout)
+                        .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 13)
+                        .padding(.top, 20)
                     
                     ScrollView (.horizontal, showsIndicators: false){
                         HStack(spacing: 15) {
                             Button(action: {
-                                isModalPresented.toggle()
+                                isModal2Presented.toggle()
                             }, label: {
                                 Text( "Franco ")
                                     .foregroundStyle(.white)
@@ -216,12 +218,12 @@ struct GalleryView: View {
                                     .background(Color(red: 0.749, green: 0.352, blue: 0.949))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                QuickShortcutsView(isPresented: $isModalPresented)
-                            //                            }
+                            .sheet(isPresented: $isModal2Presented){
+                                QuickShortcutsView(isPresented: $isModal2Presented)
+                            }
                             
                             Button(action: {
-                                isModalPresented.toggle()
+                                isModal2Presented.toggle()
                             }, label: {
                                 Text("Franco ")
                                     .foregroundStyle(.white)
@@ -230,14 +232,14 @@ struct GalleryView: View {
                                     .background(Color(red: 0.749, green: 0.352, blue: 0.949))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                QuickShortcutsView(isPresented: $isModalPresented)
-                            //                            }
+                            .sheet(isPresented: $isModal2Presented){
+                                QuickShortcutsView(isPresented: $isModal2Presented)
+                            }
                             
                             
                             
                             Button(action: {
-                                isModalPresented.toggle()
+                                isModal2Presented.toggle()
                             }, label: {
                                 Text("Franco ")
                                     .foregroundStyle(.white)
@@ -246,13 +248,13 @@ struct GalleryView: View {
                                     .background(Color(red: 0.749, green: 0.352, blue: 0.949))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                QuickShortcutsView(isPresented: $isModalPresented)
-                            //                            }
+                            .sheet(isPresented: $isModal2Presented){
+                                QuickShortcutsView(isPresented: $isModal2Presented)
+                            }
                             
                             
                             Button(action: {
-                                isModalPresented.toggle()
+                                isModal2Presented.toggle()
                             }, label: {
                                 Text("Franco ")
                                     .foregroundStyle(.white)
@@ -261,13 +263,13 @@ struct GalleryView: View {
                                     .background(Color(red: 0.749, green: 0.352, blue: 0.949))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                QuickShortcutsView(isPresented: $isModalPresented)
-                            //                            }
+                            .sheet(isPresented: $isModal2Presented){
+                                QuickShortcutsView(isPresented: $isModal2Presented)
+                            }
                             
                             
                             Button(action: {
-                                isModalPresented.toggle()
+                                isModal2Presented.toggle()
                             }, label: {
                                 Text("Franco ")
                                     .foregroundStyle(.white)
@@ -276,13 +278,13 @@ struct GalleryView: View {
                                     .background(Color(red: 0.749, green: 0.352, blue: 0.949))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                QuickShortcutsView(isPresented: $isModalPresented)
-                            //                            }
+                            .sheet(isPresented: $isModal2Presented){
+                                QuickShortcutsView(isPresented: $isModal2Presented)
+                            }
                             
                             
                             Button(action: {
-                                isModalPresented.toggle()
+                                isModal2Presented.toggle()
                             }, label: {
                                 Text("Franco ")
                                     .foregroundStyle(.white)
@@ -291,9 +293,9 @@ struct GalleryView: View {
                                     .background(Color(red: 0.749, green: 0.352, blue: 0.949))
                                     .cornerRadius(25.0)
                             })
-                            //                            .sheet(isPresented: $isModalPresented){
-                            //                                QuickShortcutsView(isPresented: $isModalPresented)
-                            //  }
+                            .sheet(isPresented: $isModal2Presented){
+                                QuickShortcutsView(isPresented: $isModal2Presented)
+                            }
                             //multiple buttons for the second shortcut
                             // }
                         }
@@ -491,6 +493,8 @@ struct GalleryView: View {
                     .frame(height: 130)
                 }
             }
+            
+            
         }
     }
 }
