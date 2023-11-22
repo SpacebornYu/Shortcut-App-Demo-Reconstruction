@@ -32,37 +32,44 @@ struct QuickShortcutsView: View {
         NavigationView {
             VStack {
                 VStack {
-                    Text("Start Pomodoro")
+                    Text("Markup and Send")
                         .bold()
                         .font(.system(size: 30))
-                        .padding(.top, -20)
+                        .padding(.top, 20)
                     
                     
-                    Text("Start a custom timer and turn on your focus")
+                    Text("Take any image input, quickly mark it up, and")
                         .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
                         .padding(.top, -10)
                     
-                    Text("until it's done")
+                    Text("share it via iMessage")
                         .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
                         .padding(.top, -5)
                     
-                    Text("Start Pomodoro")
-                        .font(.system(size: 20))
-                        .padding(.top, 50)
+                    Text("Markup and Send")
+                        .font(.system(size: 18))
+                        .padding(.top, 65)
                         .foregroundStyle(.white)
                         .font(.title)
                         .frame(width: 175, height: 120)
-                        .background(Color(red: 1.0, green: 0.89, blue: 0.227))
+                        .background(Color(red: 0.960, green: 0.556, blue: 0.785))
                         .cornerRadius(25.0)
                         .fontWeight(.semibold)
                         .padding(.top, 20)
                     
-                    Image(systemName: "timer")
-                        .foregroundColor(.white)
-                        .padding(.top, -110)
-                        .font(.system(size: 23))
-                        .padding(.leading, -70)
+                        Image(systemName: "photo.fill")
+                            .foregroundColor(.white)
+                            .padding(.top, -110)
+                            .font(.system(size: 23))
+                            .padding(.leading, -70)
                         .fontWeight(.bold)
+                        Image(systemName: "ellipsis.circle.fill")
+                            .foregroundColor(.white)
+                            .padding(.top, -115)
+                            .font(.system(size: 23))
+                            .padding(.leading, 125)
+                        .fontWeight(.bold)
+                    
                 } .padding(.top, 10)
                 
                 VStack {
@@ -74,8 +81,31 @@ struct QuickShortcutsView: View {
                     .font(.system(size: 20))
                 
                 
-                
                     HStack {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30)
+                            .background(Color.blue)
+                            .fontWeight(.bold)
+                            .cornerRadius(6.0)
+                        
+                        
+                        Text("Appears in Share Sheet")
+                    }.padding(.leading, -140)
+                    
+                    
+                    HStack {
+                        Image(systemName: "gearshape.fill")
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30)
+                            .background(Color.gray)
+                            .fontWeight(.bold)
+                            .cornerRadius(6.0)
+                        
+                        Text("Appears in Quick Actions on Mac")
+                    }.padding(.leading, -68)
+                    HStack {
+                        
                         Image(systemName: "menubar.rectangle")
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
@@ -87,10 +117,10 @@ struct QuickShortcutsView: View {
                     .padding(.leading, -100)
                     
                     HStack {
-                        Image(systemName: "applewatch.side.right")
+                        Image(systemName: "text.viewfinder")
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
-                            .background(Color.black)
+                            .background(Color.red)
                             .fontWeight(.bold)
                             .cornerRadius(6.0)
                         
@@ -103,7 +133,7 @@ struct QuickShortcutsView: View {
                         
                     }
                     .foregroundColor(.white)
-                    .frame(width: 360, height: 49)
+                    .frame(width: 350, height: 49)
                     .background(Color.blue)
                     .cornerRadius(8.0)
                     .padding(.top)
@@ -111,7 +141,7 @@ struct QuickShortcutsView: View {
                     .font(.system(size: 18))
 
                 }
-                .padding(.bottom)
+                .padding(.bottom, 50)
                 
             }
             
