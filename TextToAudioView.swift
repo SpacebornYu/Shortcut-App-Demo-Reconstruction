@@ -28,7 +28,7 @@ struct TextToAudioView: View {
                         .foregroundStyle(.white)
                         .font(.title)
                         .frame(width: 175, height: 120)
-                        .background(Color(red: 1.0, green: 0.27, blue: 0.227))
+                        .background(Color(red: 1.0, green: 0.415, blue: 0.431))
                         .cornerRadius(25.0)
                         .fontWeight(.semibold)
                         .padding(.top, 20)

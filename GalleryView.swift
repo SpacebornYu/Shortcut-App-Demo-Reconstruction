@@ -245,12 +245,24 @@ struct GalleryView: View {
                             Button(action: {
                                 isModal2Presented.toggle()
                             }, label: {
-                                Text( "Franco ")
+                                Text("Markup and Send")
+                                    .font(.system(size: 17))
+                                    .padding(.leading, -10)
+                                    .padding(.top, 50)
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 165, height: 110)
-                                    .background(Color(red: 0.749, green: 0.352, blue: 0.949))
+                                    .background(Color(red: 0.960, green: 0.556, blue: 0.785))
                                     .cornerRadius(25.0)
+                                    .padding(.leading, 1)
+                                    .fontWeight(.semibold)
+                                
+                                Image(systemName: "photo.fill")
+                                    .foregroundColor(.white)
+                                    .padding(.top, -40)
+                                    .font(.system(size: 23))
+                                    .padding(.leading, -160)
+                                    .fontWeight(.bold)
                             })
                             .sheet(isPresented: $isModal2Presented){
                                 QuickShortcutsView(isPresented: $isModal2Presented)
@@ -259,13 +271,25 @@ struct GalleryView: View {
                             Button(action: {
                                 isModal2Presented.toggle()
                             }, label: {
-                                Text("Franco ")
+                                Text("NPR News Now")
+                                    .font(.system(size: 18))
+                                    .padding(.leading, -10)
+                                    .padding(.top, 50)
                                     .foregroundStyle(.white)
                                     .font(.title)
                                     .frame(width: 165, height: 110)
-                                    .background(Color(red: 0.749, green: 0.352, blue: 0.949))
+                                    .background(Color(red: 0.549, green: 0.364, blue: 0.772))
                                     .cornerRadius(25.0)
-                            })
+                                    .padding(.leading, 1)
+                                    .fontWeight(.semibold)
+                                
+                                Image(systemName: "headphones")
+                                    .foregroundColor(.white)
+                                    .padding(.top, -40)
+                                    .font(.system(size: 23))
+                                    .padding(.leading, -160)
+                                    .fontWeight(.bold)
+                            }).padding(.leading, -9)
                             .sheet(isPresented: $isModal2Presented){
                                 QuickShortcutsView(isPresented: $isModal2Presented)
                             }
