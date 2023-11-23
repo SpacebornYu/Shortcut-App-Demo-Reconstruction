@@ -58,6 +58,7 @@ struct QuickShortcutsView: View {
                         .fontWeight(.semibold)
                         .padding(.top, 20)
                         .accessibilityElement(children: .combine)
+                        .accessibilityAddTraits(.isButton)
                     
                         Image(systemName: "photo.fill")
                         .accessibilityHidden(true)
