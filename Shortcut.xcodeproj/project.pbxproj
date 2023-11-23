@@ -12,7 +12,7 @@
 		BE1FA4AA2B04CBEE00FF9E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1FA4A92B04CBEE00FF9E0F /* Assets.xcassets */; };
 		BE1FA4AD2B04CBEE00FF9E0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1FA4AC2B04CBEE00FF9E0F /* Preview Assets.xcassets */; };
 		BE1FA4B42B04D81D00FF9E0F /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA4B32B04D81D00FF9E0F /* ShortcutView.swift */; };
-		BE1FA4B62B04D83400FF9E0F /* AutomatationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA4B52B04D83400FF9E0F /* AutomatationView.swift */; };
+		BE1FA4B62B04D83400FF9E0F /* AutomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA4B52B04D83400FF9E0F /* AutomationView.swift */; };
 		BE1FA4B82B04D86C00FF9E0F /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA4B72B04D86C00FF9E0F /* GalleryView.swift */; };
 		BECF786E2B0B5BAA005CD836 /* TextToAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF786D2B0B5BAA005CD836 /* TextToAudioView.swift */; };
 		BECF78702B0B5D62005CD836 /* QuickShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF786F2B0B5D62005CD836 /* QuickShortcutsView.swift */; };
@@ -25,7 +25,7 @@
 		BE1FA4A92B04CBEE00FF9E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1FA4AC2B04CBEE00FF9E0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE1FA4B32B04D81D00FF9E0F /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
-		BE1FA4B52B04D83400FF9E0F /* AutomatationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomatationView.swift; sourceTree = "<group>"; };
+		BE1FA4B52B04D83400FF9E0F /* AutomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationView.swift; sourceTree = "<group>"; };
 		BE1FA4B72B04D86C00FF9E0F /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		BECF786D2B0B5BAA005CD836 /* TextToAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToAudioView.swift; sourceTree = "<group>"; };
 		BECF786F2B0B5D62005CD836 /* QuickShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickShortcutsView.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 				BECF786F2B0B5D62005CD836 /* QuickShortcutsView.swift */,
 				BECF786D2B0B5BAA005CD836 /* TextToAudioView.swift */,
 				BE1FA4B72B04D86C00FF9E0F /* GalleryView.swift */,
-				BE1FA4B52B04D83400FF9E0F /* AutomatationView.swift */,
+				BE1FA4B52B04D83400FF9E0F /* AutomationView.swift */,
 				BE1FA4B32B04D81D00FF9E0F /* ShortcutView.swift */,
 				BE1FA4A42B04CBEE00FF9E0F /* Shortcut */,
 				BE1FA4A32B04CBEE00FF9E0F /* Products */,
@@ -156,7 +156,7 @@
 				BE1FA4B42B04D81D00FF9E0F /* ShortcutView.swift in Sources */,
 				BECF786E2B0B5BAA005CD836 /* TextToAudioView.swift in Sources */,
 				BE1FA4A82B04CBEE00FF9E0F /* ContentView.swift in Sources */,
-				BE1FA4B62B04D83400FF9E0F /* AutomatationView.swift in Sources */,
+				BE1FA4B62B04D83400FF9E0F /* AutomationView.swift in Sources */,
 				BE1FA4A62B04CBEE00FF9E0F /* ShortcutApp.swift in Sources */,
 				BE1FA4B82B04D86C00FF9E0F /* GalleryView.swift in Sources */,
 			);

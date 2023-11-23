@@ -10,9 +10,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Shortcut", systemImage: "square.2.layers.3d.fill")
                 }
-            AutomatationView()
+            AutomationView()
                 .tabItem {
-                    Label("Automatation", systemImage: "deskclock.fill")
+                    Label("Automation", systemImage: "deskclock.fill")
                 }
             GalleryView()
                 .tabItem {
