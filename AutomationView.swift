@@ -14,6 +14,7 @@ struct AutomationView: View {
                 Image(systemName: "sparkles")
                     .foregroundStyle(.blue)
                     .font(.custom("", size: 50))
+                    .accessibilityHidden(true)
                 Text("No Automations")
                     .fontWeight(.bold)
                     .font(.system(size: 25))

@@ -28,6 +28,7 @@ struct GalleryView: View {
                         .font(.system(size: 25))
                         .padding(.leading, 20)
                         .padding(.bottom, -25)
+                        .accessibilityAddTraits(.isHeader)
                     ScrollView (.horizontal, showsIndicators: false){
                         HStack(spacing: 25) {
                             Image(systemName: "accessibility")
@@ -36,6 +37,7 @@ struct GalleryView: View {
                                 .frame(width: 350, height: 140)
                                 .background(Color.blue)
                                 .cornerRadius(25.0)
+                                
                             
                             Image(systemName: "network.badge.shield.half.filled")
                                 .foregroundStyle(.white)
@@ -57,7 +59,7 @@ struct GalleryView: View {
                                 .frame(width: 350, height: 140)
                                 .background(Color.purple)
                                 .cornerRadius(25.0)
-                        }
+                        }.accessibilityHidden(true)
                         Divider()
                     }
                     .padding(.leading, 10)
@@ -67,6 +69,7 @@ struct GalleryView: View {
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.bottom, 0)
+                        .accessibilityAddTraits(.isHeader)
                     Text("Shortcuts to help you focus")
                         .fontWeight(.regular)
                         .font(.callout)
@@ -93,7 +96,7 @@ struct GalleryView: View {
                                                 .cornerRadius(25.0)
                                                 .fontWeight(.semibold)
                                             
-                                        }
+                                        }.accessibilityElement(children: .combine)
                                     })
                                     
                                     .sheet(isPresented: $isModalPresented){
@@ -103,6 +106,7 @@ struct GalleryView: View {
                                     
                                 }
                                 Image(systemName: "timer")
+                                    .accessibilityHidden(true)
                                     .foregroundColor(.white)
                                     .padding(.top, -40)
                                     .font(.system(size: 23))
@@ -126,8 +130,10 @@ struct GalleryView: View {
                                     .background(Color(red: 1.0, green: 0.415, blue: 0.431))
                                     .cornerRadius(25.0)
                                     .fontWeight(.semibold)
+                                    .accessibilityElement(children: .combine)
                             })
                             Image(systemName: "waveform.path")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 20))
@@ -233,6 +239,7 @@ struct GalleryView: View {
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.bottom, -50)
+                        .accessibilityAddTraits(.isHeader)
                     
                     Text("Less taps, more done with these fast shortcuts")
                         .fontWeight(.regular)
@@ -386,6 +393,7 @@ struct GalleryView: View {
                         .fontWeight(.heavy)
                         .font(.system(size: 25))
                         .padding(.leading, 10)
+                        .accessibilityAddTraits(.isHeader)
                     Text("Shortcuts everyone should have in their toolbox")
                         .fontWeight(.regular)
                         .font(.callout)
@@ -406,8 +414,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, 1)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "face.smiling")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 25))
@@ -426,8 +436,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "film.fill")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 25))
@@ -445,8 +457,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "keyboard")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 25))
@@ -464,8 +478,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "list.bullet")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -482,6 +498,7 @@ struct GalleryView: View {
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.bottom, -20)
+                        .accessibilityAddTraits(.isHeader)
                     Text("Automate your library like you've never imagined")
                         .fontWeight(.regular)
                         .font(.callout)
@@ -494,6 +511,7 @@ struct GalleryView: View {
                             
                             
                             Text("Remove\nBackground From\nPotrait")
+                                
                                 .font(.system(size: 16))
                                 .padding(.leading, -10)
                                 .padding(.top, 45)
@@ -504,8 +522,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, 5)
                                 .fontWeight(.bold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "camera.aperture")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -523,8 +543,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "camera.fill")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -542,8 +564,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.bold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "camera.fill")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -561,8 +585,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "airplayaudio")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -581,6 +607,7 @@ struct GalleryView: View {
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.top, 0)
+                        .accessibilityAddTraits(.isHeader)
                     Text("Get work done, wherever you are")
                         .fontWeight(.regular)
                         .font(.callout)
@@ -602,8 +629,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, 5)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "hand.raised.fill")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -621,8 +650,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "airplayaudio")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -640,8 +671,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "keyboard")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
@@ -659,8 +692,10 @@ struct GalleryView: View {
                                 .cornerRadius(25.0)
                                 .padding(.leading, -13)
                                 .fontWeight(.semibold)
+                                .accessibilityElement(children: .combine)
                             
                             Image(systemName: "calendar")
+                                .accessibilityHidden(true)
                                 .foregroundColor(.white)
                                 .padding(.top, -40)
                                 .font(.system(size: 23))
