@@ -37,7 +37,8 @@ struct QuickShortcutsView: View {
                         .font(.system(size: 30))
                         .padding(.top, 60)
                     
-                    
+                    // .accessibilityHidden(true)
+                    //.accessibilityElement(children: .combine)
                     Text("Take any image input, quickly mark it up, and")
                         .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
                         .padding(.top, -10)
@@ -56,19 +57,24 @@ struct QuickShortcutsView: View {
                         .cornerRadius(25.0)
                         .fontWeight(.semibold)
                         .padding(.top, 20)
+                        .accessibilityElement(children: .combine)
                     
                         Image(systemName: "photo.fill")
+                        .accessibilityHidden(true)
                             .foregroundColor(.white)
                             .padding(.top, -110)
                             .font(.system(size: 23))
                             .padding(.leading, -70)
                         .fontWeight(.bold)
+                       
                         Image(systemName: "ellipsis.circle.fill")
+                        .accessibilityHidden(true)
                             .foregroundColor(.white)
                             .padding(.top, -115)
                             .font(.system(size: 23))
                             .padding(.leading, 125)
                         .fontWeight(.bold)
+                       
                     
                 } .padding(.top, 10)
                 
@@ -83,6 +89,7 @@ struct QuickShortcutsView: View {
                 
                     HStack {
                         Image(systemName: "square.and.arrow.up")
+                            .accessibilityHidden(true)
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
                             .background(Color.blue)
@@ -96,6 +103,7 @@ struct QuickShortcutsView: View {
                     
                     HStack {
                         Image(systemName: "gearshape.fill")
+                            .accessibilityHidden(true)
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
                             .background(Color.gray)
@@ -107,6 +115,7 @@ struct QuickShortcutsView: View {
                     HStack {
                         
                         Image(systemName: "menubar.rectangle")
+                            .accessibilityHidden(true)
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
                             .background(Color.gray)
@@ -118,15 +127,16 @@ struct QuickShortcutsView: View {
                     
                     HStack {
                         Image(systemName: "text.viewfinder")
+                            .accessibilityHidden(true)
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
                             .background(Color.red)
                             .fontWeight(.bold)
                             .cornerRadius(6.0)
                         
-                        Text("Appears on Apple Watch")
+                        Text("Receives What's Onscreen")
                     }
-                    .padding(.leading, -130)
+                    .padding(.leading, -110)
                     
                     
                     Button("Set Up Shortcut") {

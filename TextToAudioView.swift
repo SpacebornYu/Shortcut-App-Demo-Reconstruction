@@ -13,7 +13,7 @@ struct TextToAudioView: View {
                         .font(.system(size: 30))
                         .padding(.top, -20)
                     
-                    
+                   
                     Text("Start a custom timer and turn on your focus")
                         .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
                         .padding(.top, -10)
@@ -32,13 +32,16 @@ struct TextToAudioView: View {
                         .cornerRadius(25.0)
                         .fontWeight(.semibold)
                         .padding(.top, 20)
+                        .accessibilityElement(children: .combine)
                     
                     Image(systemName: "timer")
+                        .accessibilityHidden(true)
                         .foregroundColor(.white)
                         .padding(.top, -110)
                         .font(.system(size: 23))
                         .padding(.leading, -70)
                         .fontWeight(.bold)
+                        
                 } .padding(.top, 10)
                 
                 VStack {
@@ -58,12 +61,14 @@ struct TextToAudioView: View {
                             .background(Color.gray)
                             .fontWeight(.bold)
                             .cornerRadius(6.0)
+                            .accessibilityHidden(true)
                     Text("Appears in Menu Bar on Mac")
                 }
                     .padding(.leading, -100)
                     
                     HStack {
                         Image(systemName: "applewatch.side.right")
+                            .accessibilityHidden(true)
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
                             .background(Color.black)

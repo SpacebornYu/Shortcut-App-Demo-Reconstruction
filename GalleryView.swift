@@ -708,7 +708,8 @@ struct GalleryView: View {
                 }
             }
             
-            
+            // .accessibilityHidden(true)
+            //.accessibilityElement(children: .combine)
         }
     }
 }
