@@ -24,7 +24,7 @@ struct GalleryView: View {
                 VStack (alignment: .leading) {
                     
                     Text("Shortcuts for Accessibility")
-                        .bold()
+                        .fontWeight(.heavy)
                         .font(.system(size: 25))
                         .padding(.leading, 20)
                         .padding(.bottom, -25)
@@ -58,11 +58,12 @@ struct GalleryView: View {
                                 .background(Color.purple)
                                 .cornerRadius(25.0)
                         }
+                        Divider()
                     }
                     .padding(.leading, 10)
                     .frame(height: 200)
                     Text("Get stuff Done")
-                        .bold()
+                        .fontWeight(.heavy)
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.bottom, 0)
@@ -220,7 +221,7 @@ struct GalleryView: View {
                             }
                         }
                         
-                        
+                        Divider()
                     }
                     .padding(.leading, 10)
                     .padding(.bottom, 10)
@@ -228,7 +229,7 @@ struct GalleryView: View {
                     
                     
                     Text("Quick Shortcuts")
-                        .bold()
+                        .fontWeight(.heavy)
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.bottom, -50)
@@ -377,11 +378,12 @@ struct GalleryView: View {
                                 QuickShortcutsView(isPresented: $isModal2Presented)
                             }
                         }
+                        Divider()
                     }
                     .padding(.leading, 10)
                     .frame(height: 130)
                     Text("Essentials")
-                        .bold()
+                        .fontWeight(.heavy)
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                     Text("Shortcuts everyone should have in their toolbox")
@@ -470,12 +472,13 @@ struct GalleryView: View {
                                 .padding(.leading, -155)
                                 .fontWeight(.bold)
                         }
+                        Divider()
                         
                     }
                     .padding(.leading, 10)
                     .frame(height: 110)
                     Text("Photography")
-                        .bold()
+                        .fontWeight(.heavy)
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.bottom, -20)
@@ -567,13 +570,14 @@ struct GalleryView: View {
                                 .fontWeight(.bold)
                             
                         }
+                        Divider()
                         
                     }
                     .padding(.leading, 10)
                     .frame(height: 130)
                     
                     Text("Work from Anywhere")
-                        .bold()
+                        .fontWeight(.heavy)
                         .font(.system(size: 25))
                         .padding(.leading, 10)
                         .padding(.top, 0)
@@ -663,7 +667,6 @@ struct GalleryView: View {
                                 .padding(.leading, -165)
                                 .fontWeight(.bold)
                         }
-                        
                     }
                     .padding(.leading, 10)
                     .frame(height: 130)
