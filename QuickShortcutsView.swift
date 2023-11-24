@@ -4,25 +4,6 @@
 //
 //  Created by Yuri Mario Gianoli on 20/11/23.
 //
-
-//import SwiftUI
-//
-//struct QuickShortcutsView: View {
-//    @Binding var isPresented: Bool
-//    var body: some View {
-//        Button("Cancel") {
-//            isPresented = false
-//        }
-//        .padding(.leading, -170)
-//        .padding(.top, -400)
-//    }
-//}
-//
-//struct QuickShortcutsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuickShortcutsView(isPresented: .constant(false))
-//    }
-//}
 import SwiftUI
 
 struct QuickShortcutsView: View {
@@ -37,8 +18,6 @@ struct QuickShortcutsView: View {
                         .font(.system(size: 30))
                         .padding(.top, 60)
                     
-                    // .accessibilityHidden(true)
-                    //.accessibilityElement(children: .combine)
                     Text("Take any image input, quickly mark it up, and")
                         .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
                         .padding(.top, -10)
