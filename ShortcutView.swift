@@ -115,7 +115,111 @@ struct ShortcutView: View {
                         .padding(.top, -57)
                     
                     
+                    HStack {
+                        Image(systemName: "camera")
+                            .accessibilityHidden(true)
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30)
+                            .background(Color.gray)
+                            .fontWeight(.bold)
+                            .cornerRadius(6.0)
+                        
+                        Text("Camera")
+                            .fontWeight(.semibold)
+                            .font(.system(size: 25))
+                            .padding(.bottom, 0)
+                        Image(systemName: "arrow.right")
+                            .fontWeight(.semibold)
+                    }
+                    .padding(.leading, -171)
                     
+                    Text("") //text si può anche cancellare ma causa spostamento di padding
+                        .frame(width: 350, height: 110)
+                        .background(Color.gray)
+                        .cornerRadius(25.0)
+                        .padding(.leading, -10)
+                    
+                    Image(systemName: "person.crop.square")
+                        .font(.system(size: 30))
+                        .accessibilityHidden(true)
+                        .foregroundColor(.black)
+                        .frame(width: 60, height: 60)
+                        .background(Color(red: 0.639, green: 0.635, blue: 0.654))
+                        .fontWeight(.regular)
+                        .cornerRadius(100)
+                        .padding(.leading, -165)
+                        .padding(.top, -100)
+                    
+                    Text("Selfie")
+                        .font(.system(size: 12))
+                        .fontWeight(.light)
+                        .font(.callout)
+                        .foregroundColor(Color.black)
+                        .padding(.leading, -150)
+                        .padding(.top, -40)
+                    
+                    
+                    
+                    Image(systemName: "video.fill")
+                        .font(.system(size: 30))
+                        .accessibilityHidden(true)
+                        .foregroundColor(.black)
+                        .frame(width: 60, height: 60)
+                        .background(Color(red: 0.639, green: 0.635, blue: 0.654))
+                        .fontWeight(.regular)
+                        .cornerRadius(100)
+                        .padding(.leading, -80)
+                        .padding(.top, -115)
+                    
+                    Text("Video")
+                        .font(.system(size: 12))
+                        .fontWeight(.light)
+                        .font(.callout)
+                        .foregroundColor(Color.black)
+                        .padding(.leading, -65)
+                        .padding(.top, -55)
+                    
+                    
+                    Image(systemName: "f.cursive")
+                        .font(.system(size: 30))
+                        .accessibilityHidden(true)
+                        .foregroundColor(.black)
+                        .frame(width: 60, height: 60)
+                        .background(Color(red: 0.639, green: 0.635, blue: 0.654))
+                        .fontWeight(.light)
+                        .cornerRadius(100)
+                        .padding(.leading, 70)
+                        .padding(.top, -130)
+                    
+                    
+                    Text("Potrait")
+                        .font(.system(size: 12))
+                        .fontWeight(.light)
+                        .font(.callout)
+                        .foregroundColor(Color.black)
+                        .padding(.leading, 73)
+                        .padding(.top, -70)
+                    
+                    
+                    Image(systemName: "f.cursive")
+                        .font(.system(size: 30))
+                        .accessibilityHidden(true)
+                        .foregroundColor(.black)
+                        .frame(width: 60, height: 60)
+                        .background(Color(red: 0.639, green: 0.635, blue: 0.654))
+                        .fontWeight(.light)
+                        .cornerRadius(100)
+                        .padding(.leading, 240)
+                        .padding(.top, -144)
+                    
+                    
+                    Text("Potrait\nSelfie")
+                        .font(.system(size: 10))
+                        .fontWeight(.light)
+                        .font(.callout)
+                        .foregroundColor(Color.black)
+                        .padding(.leading, 250)
+                        .padding(.top, -90)
                     
                     
                 }
