@@ -37,7 +37,7 @@ struct GalleryView: View {
                                 .frame(width: 350, height: 140)
                                 .background(Color.blue)
                                 .cornerRadius(25.0)
-                                
+                            
                             
                             Image(systemName: "network.badge.shield.half.filled")
                                 .foregroundStyle(.white)
@@ -511,7 +511,7 @@ struct GalleryView: View {
                             
                             
                             Text("Remove\nBackground From\nPotrait")
-                                
+                            
                                 .font(.system(size: 16))
                                 .padding(.leading, -10)
                                 .padding(.top, 45)
